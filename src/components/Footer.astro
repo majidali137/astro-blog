@@ -1,0 +1,16 @@
+---
+import Counter from "./Counter";
+---
+
+<footer>
+  <small>
+    Copyright &copy; <span id="copyright"></span> | All rights reserved
+  </small>
+  <Counter client:visible/>
+</footer>
+
+<script>
+  document.querySelector("#copyright").textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>
